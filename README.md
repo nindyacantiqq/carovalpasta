@@ -18,3 +18,11 @@ Website presentasi/interaktif untuk produk NASPO CAROVAL.
 7. Save, lalu tunggu GitHub Pages membuat link website.
 
 Tidak membutuhkan database atau server.
+
+
+## Favicon
+- `favicon.svg` — ikon utama browser
+- `favicon-32.png` — ikon browser 32×32
+- `favicon-180.png` — ikon untuk perangkat Apple
+
+Favicon menggunakan konsep wortel + daun + bentuk pasta dengan warna oranye, hijau, dan cream agar menyatu dengan identitas visual CAROVAL.
