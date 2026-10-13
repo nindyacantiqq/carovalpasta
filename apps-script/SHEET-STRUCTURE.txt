@@ -1,0 +1,39 @@
+CAROVAL Database — Struktur Google Sheet
+=========================================
+
+Buat 4 sheet dengan nama PERSIS seperti di bawah.
+Header harus di baris 1.
+
+────────────────────────────────────────
+SHEET: Orders
+────────────────────────────────────────
+A1: Timestamp
+B1: Name
+C1: Contact
+D1: Product
+E1: Qty
+F1: Note
+
+────────────────────────────────────────
+SHEET: Feedback
+────────────────────────────────────────
+A1: Timestamp
+B1: Name
+C1: Rating
+D1: Comment
+
+────────────────────────────────────────
+SHEET: QuizScores
+────────────────────────────────────────
+A1: Timestamp
+B1: Name
+C1: Score
+D1: Total
+
+────────────────────────────────────────
+SHEET: Stats
+────────────────────────────────────────
+A1: Key
+B1: Value
+A2: visitors
+B2: 0

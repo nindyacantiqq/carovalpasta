@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <link rel="stylesheet" href="https://silverhawk.web.id/lock/lock.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAROVAL — Pasta dari Ampas Wortel</title>
@@ -11,19 +10,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <body data-shlock-mode="ultimate" data-shlock-domain="" data-shlock-brand="carovalpasta" data-shlock-social="https://dai.ly/xatkg3q,https://www.instagram.com/anindyha_/">
   <header class="navbar">
     <a class="logo" href="#home">🥕 CAROVAL</a>
     <nav>
       <a href="#tentang">Tentang</a>
       <a href="#produk">Produk</a>
       <a href="#proses">Proses</a>
+      <a href="#pesan">Pesan</a>
       <a href="#quiz">Quiz</a>
+      <a href="#feedback">Feedback</a>
     </nav>
     <button class="menu-btn" aria-label="Menu">☰</button>
   </header>
 
   <main>
+    <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero-copy">
         <span class="pill">INOVASI PANGAN BERKELANJUTAN 🌱</span>
@@ -36,16 +37,17 @@
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#produk">Lihat Produk 🍝</a>
-          <a class="btn secondary" href="#proses">Cara Membuat</a>
+          <a class="btn secondary" href="#pesan">Pesan Sekarang</a>
         </div>
       </div>
       <div class="mascot-wrap">
         <div class="blob"></div>
-        <img src="assets/mascot-caroval.png" alt="Maskot CAROVAL">
+        <img src="hotlink/fotoprofile.png" alt="Maskot CAROVAL" class="mascot-img">
         <div class="floating-card">🥕 <b>Zero Waste Idea</b><br><small>Ampas wortel → pasta</small></div>
       </div>
     </section>
 
+    <!-- TENTANG -->
     <section id="tentang" class="section">
       <div class="section-head">
         <span class="eyebrow">KENALAN DULU</span>
@@ -60,6 +62,7 @@
       </div>
     </section>
 
+    <!-- PRODUK -->
     <section id="produk" class="section product-section">
       <div class="section-head">
         <span class="eyebrow">PILIH BENTUK FAVORITMU</span>
@@ -92,6 +95,7 @@
       <div id="product-info" class="product-info">✨ Pilih salah satu varian untuk melihat rekomendasi penyajiannya.</div>
     </section>
 
+    <!-- PROSES -->
     <section id="proses" class="section">
       <div class="section-head">
         <span class="eyebrow">DARI SISA JADI BERKAH</span>
@@ -108,6 +112,7 @@
       </div>
     </section>
 
+    <!-- STATS -->
     <section class="section stats">
       <div><strong>🥕</strong><span>Bahan utama<br><b>Ampas wortel</b></span></div>
       <div><strong>🍝</strong><span>Bentuk produk<br><b>Pasta kering</b></span></div>
@@ -115,29 +120,123 @@
       <div><strong>⏱️</strong><span>Praktis<br><b>Mudah diolah</b></span></div>
     </section>
 
+    <!-- FORM PRE-ORDER -->
+    <section id="pesan" class="section order-section">
+      <div class="section-head">
+        <span class="eyebrow">PESAN SEKARANG</span>
+        <h2>Pre-Order CAROVAL 🍝</h2>
+        <p>Isi form di bawah. Data akan langsung tersimpan di database kami.</p>
+      </div>
+      <form id="order-form" class="form-card">
+        <div class="form-row">
+          <label for="order-name">Nama Lengkap *</label>
+          <input type="text" id="order-name" name="name" required placeholder="Contoh: Anindyha">
+        </div>
+        <div class="form-row">
+          <label for="order-contact">WhatsApp / Email *</label>
+          <input type="text" id="order-contact" name="contact" required placeholder="08xxxxxxxxxx atau email@gmail.com">
+        </div>
+        <div class="form-row">
+          <label for="order-product">Varian Pasta *</label>
+          <select id="order-product" name="product" required>
+            <option value="">-- Pilih Varian --</option>
+            <option value="Spaghetti">Spaghetti</option>
+            <option value="Penne">Penne</option>
+            <option value="Fusilli">Fusilli</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="order-qty">Jumlah (pack) *</label>
+          <input type="number" id="order-qty" name="qty" min="1" max="50" value="1" required>
+        </div>
+        <div class="form-row">
+          <label for="order-note">Catatan (opsional)</label>
+          <textarea id="order-note" name="note" rows="3" placeholder="Contoh: Ambil di sekolah / kirim ke rumah"></textarea>
+        </div>
+        <button type="submit" class="btn primary form-btn" id="order-submit">Kirim Pesanan 🚀</button>
+        <p id="order-status" class="form-status"></p>
+      </form>
+      <div class="qris-box">
+        <p>Atau bayar via QRIS:</p>
+        <img src="hotlink/Qris.png" alt="QRIS CAROVAL" class="qris-img">
+      </div>
+    </section>
+
+    <!-- QUIZ -->
     <section id="quiz" class="section quiz-section">
       <div class="quiz-card">
         <span class="eyebrow">CAROVAL MINI QUIZ</span>
         <h2>Seberapa kenal kamu dengan CAROVAL? 👀</h2>
         <p id="question">Ampas wortel pada CAROVAL dimanfaatkan untuk menjadi...</p>
-        <div id="answers" class="answers">
-          <button data-correct="true">Bahan pasta</button>
-          <button>Bahan bakar kendaraan</button>
-          <button>Minuman bersoda</button>
-        </div>
+        <div id="answers" class="answers"></div>
         <p id="quiz-result" class="quiz-result"></p>
         <button id="next-btn" class="btn primary hidden">Pertanyaan berikutnya →</button>
+
+        <!-- Simpan skor -->
+        <div id="score-form-wrap" class="score-form-wrap hidden">
+          <p>Masukkan namamu untuk masuk leaderboard!</p>
+          <div class="score-form">
+            <input type="text" id="score-name" placeholder="Nama kamu" maxlength="30">
+            <button id="save-score-btn" class="btn primary">Simpan Skor</button>
+          </div>
+          <p id="score-status" class="form-status"></p>
+        </div>
       </div>
-      <img class="quiz-mascot" src="assets/mascot-caroval.png" alt="Maskot CAROVAL">
+
+      <div class="leaderboard-card">
+        <h3>🏆 Leaderboard</h3>
+        <ol id="leaderboard-list">
+          <li class="lb-loading">Memuat data...</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section id="feedback" class="section feedback-section">
+      <div class="section-head">
+        <span class="eyebrow">SUARA KAMU BERARTI</span>
+        <h2>Berikan Feedback 💬</h2>
+        <p>Bantu kami jadi lebih baik. Feedback langsung masuk ke database.</p>
+      </div>
+      <form id="feedback-form" class="form-card">
+        <div class="form-row">
+          <label for="fb-name">Nama *</label>
+          <input type="text" id="fb-name" name="name" required placeholder="Nama kamu">
+        </div>
+        <div class="form-row">
+          <label>Rating *</label>
+          <div class="rating-stars" id="rating-stars">
+            <button type="button" data-rate="1">★</button>
+            <button type="button" data-rate="2">★</button>
+            <button type="button" data-rate="3">★</button>
+            <button type="button" data-rate="4">★</button>
+            <button type="button" data-rate="5">★</button>
+          </div>
+          <input type="hidden" id="fb-rating" name="rating" value="0" required>
+        </div>
+        <div class="form-row">
+          <label for="fb-comment">Komentar *</label>
+          <textarea id="fb-comment" name="comment" rows="4" required placeholder="Tulis pendapatmu tentang CAROVAL..."></textarea>
+        </div>
+        <button type="submit" class="btn primary form-btn" id="fb-submit">Kirim Feedback ✨</button>
+        <p id="fb-status" class="form-status"></p>
+      </form>
+
+      <div class="feedback-list-wrap">
+        <h3>Ulasan Terbaru</h3>
+        <div id="feedback-list" class="feedback-list">
+          <p class="fb-loading">Memuat feedback...</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
     <div><b>🥕 CAROVAL</b><br><span>Pasta dari Ampas Wortel</span></div>
     <p>Inovasi kecil, dampak besar. 🌱</p>
+    <p class="visitor-count">Pengunjung: <span id="visitor-count">...</span></p>
   </footer>
 
   <script src="script.js"></script>
-<script src="https://silverhawk.web.id/lock/lock.js"></script>
-  </body>
+</body>
 </html>
